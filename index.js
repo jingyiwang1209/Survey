@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/',(req, res)=>{
-    res.send({hi:'there'});
+    res.send({bye:'buddy'});
 });
 
 // if there is an env variable that has been defined by heroku, go ahead
