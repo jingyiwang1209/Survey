@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  // let heroku know the node environment as below:
+  "engines":{
+    "node":"v8.4.0",
+    "npm":"5.3.0"
+  },
+ // let heroku know what command to run to start our server running
+  "scripts": {
+    "start":"node index.js"
+  },
+
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
