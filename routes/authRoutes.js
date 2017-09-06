@@ -14,7 +14,13 @@ module.exports = (app) => {
         })
     );
 
-    app.get("/auth/google/callback", passport.authenticate("google"));
+    app.get(
+        "/auth/google/callback",
+        passport.authenticate("google"),
+        (req, res) => {
+            res.redirect("/surveys");
+        }
+    );
 
 
 // passport is working with Express
@@ -25,6 +31,6 @@ module.exports = (app) => {
 // so res.send(req.user) return an empty page
     app.get("/api/logout", (req, res)=>{
         req.logout();
-        res.send(req.user);
+        res.redirect("/");
     });
 };

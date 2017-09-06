@@ -3,7 +3,8 @@ const{ Schema } = mongoose;
 
 
 const userSchema = new Schema({
-    authId: String
+    authId: String,
+    credits: { type: Number, default:0 }
 });
 
 // users: a collection of user instances
