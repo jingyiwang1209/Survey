@@ -12,10 +12,12 @@ const bodyParser = require('body-parser');
 // throw an error since it has not been created yet! So we need to create users first, then run passport.js
 // *JS won't automatically run the thing in models/User, so it should be manually require here.
 require('./models/User');
+require('./models/Survey');
 // We don't need to assign a variable here because passport.js does not return anything, instead
 // we just want to execute passport.js, the same thing for models/User
 require('./services/passport');
 
+mongoose.Promise = global.Promise;
 // connect to mlab
 mongoose.connect(key.mongoURI);
 
@@ -35,6 +37,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoute')(app);
 // equals to:
 // const authRoutes = require('./routes/authRoutes');
 // authRoutes(app);
