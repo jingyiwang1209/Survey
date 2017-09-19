@@ -8,6 +8,8 @@ import Header from './Header';
 import Dashboard from './Dashboard';
 import Landing from './Landing';
 import SurveyNew from './surveys/SurveyNew';
+import RequireAuth from './HOC/RequireAuth';
+import RequirePayment from './HOC/RequirePayment';
 
 class App extends Component {
     componentDidMount() {
@@ -20,9 +22,9 @@ class App extends Component {
                 <BrowserRouter>
                     <div>
                         <Header />
-                        <Route exact path="/surveys" component={Dashboard} />
+                        <Route exact path="/surveys" component={RequireAuth(Dashboard)} />
                         <Route exact path="/" component={Landing} />
-                        <Route exact path="/surveys/new" component={SurveyNew} />
+                        <Route exact path="/surveys/new" component={RequirePayment(SurveyNew)} />
                     </div>
                 </BrowserRouter>
             </div>
