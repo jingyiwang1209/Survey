@@ -79,17 +79,19 @@ class Dashboard extends Component {
                         onTermChange={term => this.setState({ term: term })}
                     />
                     <button
-                        className="grey lighten-1"
+                        className="chip"
                         onClick={this.handleSortDate}
-                        style={{ marginRight: "5px" }}
+                        style={{ marginRight: "10px" }}
                     >
                         Sort By Date{" "}
+                        <i className="material-icons right">date_range</i>
                     </button>
                     <button
-                        className="grey lighten-1"
+                        className="chip"
                         onClick={this.handleSortPopularity}
                     >
-                        Sort By Popularity{" "}
+                        Sort By Response{" "}
+                        <i className="material-icons right">reply</i>
                     </button>
                 </div>
                 {this.renderList()}
@@ -98,7 +100,7 @@ class Dashboard extends Component {
                         to="/surveys/new"
                         className="btn-floating btn-large red"
                     >
-                        <i className="material-icons">add</i>
+                        <i className="material-icons deep-orange darken-3">add</i>
                     </Link>
                 </div>
             </div>

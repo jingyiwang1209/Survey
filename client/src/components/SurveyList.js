@@ -18,12 +18,12 @@ class SurveyList extends Component {
 
       return (
         <div className="card" key={survey._id}>
-          <span
-            className="btn-flat red right"
+          <i className="material-icons right red-text"
+             style={{margin:"10px 10px 0 0", fontSize: "3rem"}}
             onClick={() => this.props.deleteSurvey(survey._id)}
           >
-            Delete
-          </span>
+            delete
+          </i>
 
           <div className="card-content">
             <span className="card-title">{survey.title}</span>

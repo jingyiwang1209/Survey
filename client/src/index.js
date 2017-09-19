@@ -18,5 +18,5 @@ ReactDOM.render(
 
 );
 
-console.log(process.env.REACT_APP_STRIPE_KEY)
-console.log(process.env.NODE_ENV)
+// console.log(process.env.REACT_APP_STRIPE_KEY)
+// console.log(process.env.NODE_ENV)
