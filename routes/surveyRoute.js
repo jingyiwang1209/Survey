@@ -32,6 +32,10 @@ module.exports = app => {
     res.send("Thank you very much for your feedback!");
   });
 
+  app.get("/api/surveys/:surveyId/:choice", (req, res) => {
+    res.send("Thank you very much for your feedback!");
+  });
+
   app.post("/api/surveys/webhooks", (req, res) => {
     const p = new Path("/api/surveys/:surveyId/:choice");
 
