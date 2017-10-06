@@ -1,7 +1,7 @@
 # SurveyDog
 
-This web app is for collecting and visualize feedback from users' customers.
-Learn more functions from the home page: https://warm-waters-76821.herokuapp.com/
+This web app is for creating, sending surveys and collecting feedback from users' customers using React, React Router, React Redux, Redux, Express, MongoDB and etc.
+See more functions from the home page: https://warm-waters-76821.herokuapp.com/
 
 ## Getting Started
 
